@@ -1,0 +1,18 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  modernadventure.vip:
+    site_hosts:
+      - canonical: wp-sandbox-1.test
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: sam@modernadventure.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+      hsts_max_age: 0
+    cache:
+      enabled: false
