@@ -27,7 +27,10 @@
   "repositories": [
     {
       "type": "composer",
-      "url": "https://wpackagist.org"
+      "url": "https://repo.packagist.com/moad/"
+    },
+    {
+      "packagist.org": false
     }
   ],
   "require": {
@@ -35,7 +38,7 @@
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^3.0.0",
     "oscarotero/env": "^1.1.0",
-    "roots/wordpress": "5.3.*",
+    "roots/wordpress": "^5.7",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/woocommerce": "3.6.*",
