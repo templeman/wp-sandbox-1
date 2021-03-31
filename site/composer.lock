@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8993ab8af032d5d5c474501f2c26129e",
+    "content-hash": "d8912aa6fbc171806c1f08c8cf3fce5f",
     "packages": [
         {
             "name": "composer/installers",
@@ -161,6 +161,38 @@
             "time": "2021-01-14T11:07:16+00:00"
         },
         {
+            "name": "modernadventure/lottery-for-woocommerce",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:modernadventure/lottery-for-woocommerce.git",
+                "reference": "b3f5520b67d386a0420a4f50880a1b148f20008f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/modernadventure/lottery-for-woocommerce/zipball/b3f5520b67d386a0420a4f50880a1b148f20008f",
+                "reference": "b3f5520b67d386a0420a4f50880a1b148f20008f",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "composer/installers": ">=v1.1.0"
+            },
+            "default-branch": true,
+            "type": "wordpress-plugin",
+            "notification-url": "https://repo.packagist.com/moad/downloads/",
+            "support": {
+                "source": "https://github.com/modernadventure/lottery-for-woocommerce/tree/main",
+                "issues": "https://github.com/modernadventure/lottery-for-woocommerce/issues"
+            },
+            "time": "2021-03-30T22:22:23+00:00"
+        },
+        {
             "name": "oscarotero/env",
             "version": "v1.2.0",
             "source": {
@@ -282,15 +314,15 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "5.7",
+            "version": "5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.7"
+                "reference": "5.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.7",
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.4",
                 "mirrors": [
                     {
                         "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
@@ -320,26 +352,13 @@
                 "cms",
                 "wordpress"
             ],
-            "support": {
-                "docs": "https://developer.wordpress.org/",
-                "forum": "https://wordpress.org/support/",
-                "irc": "irc://irc.freenode.net/wordpress",
-                "issues": "https://core.trac.wordpress.org/",
-                "rss": "https://wordpress.org/news/feed/",
-                "source": "https://core.trac.wordpress.org/browser",
-                "wiki": "https://codex.wordpress.org/"
-            },
             "funding": [
-                {
-                    "url": "https://github.com/roots",
-                    "type": "github"
-                },
                 {
                     "url": "https://www.patreon.com/rootsdev",
                     "type": "patreon"
                 }
             ],
-            "time": "2021-03-09T20:23:15+00:00"
+            "time": "2020-03-31T20:06:05+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -721,6 +740,56 @@
             "type": "wordpress-plugin",
             "notification-url": "https://repo.packagist.com/moad/downloads/",
             "homepage": "https://wordpress.org/plugins/woocommerce/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce-gateway-stripe",
+            "version": "4.3.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woocommerce-gateway-stripe/",
+                "reference": "tags/4.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.4.3.1.zip",
+                "mirrors": [
+                    {
+                        "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://repo.packagist.com/moad/downloads/",
+            "homepage": "https://wordpress.org/plugins/woocommerce-gateway-stripe/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-crontrol",
+            "version": "1.10.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-crontrol/",
+                "reference": "tags/1.10.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-crontrol.1.10.0.zip",
+                "mirrors": [
+                    {
+                        "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://repo.packagist.com/moad/downloads/",
+            "homepage": "https://wordpress.org/plugins/wp-crontrol/"
         },
         {
             "name": "wpackagist-theme/storefront",
@@ -1158,6 +1227,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "modernadventure/lottery-for-woocommerce": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,

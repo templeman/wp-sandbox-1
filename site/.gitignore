@@ -10,6 +10,9 @@ web/app/uploads/*
 web/wp
 web/.htaccess
 
+# Theme
+web/app/themes/*
+
 # Dotenv
 .env
 .env.*

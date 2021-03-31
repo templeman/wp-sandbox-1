@@ -16,3 +16,8 @@ wordpress_sites:
       hsts_max_age: 0
     cache:
       enabled: false
+    cron_trigger_lottery:
+      # cmd: "./bin/wp-all-export-cron-trigger.sh" # the cron tab will set the directory to your site root and then execute this command
+      cmd: "wget -q -O – http://wp-sandbox-1.test/?lty_lottery_cron=update" # the cron tab will set the directory to your site root and then execute this command
+      hour: "*" # run every hour
+      minute: "*/1" # run every minute
