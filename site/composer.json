@@ -46,7 +46,8 @@
     "wpackagist-plugin/woocommerce-gateway-stripe": "*",
     "wpackagist-plugin/wp-crontrol": "^1.7.0",
     "wpackagist-theme/storefront": "*",
-    "modernadventure/woocommerce-deposits": "dev-master"
+    "modernadventure/woocommerce-deposits": "dev-master",
+    "modernadventure/lottery-for-woocommerce": "dev-main"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
