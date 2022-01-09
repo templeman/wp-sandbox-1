@@ -16,7 +16,9 @@
       "homepage": "https://github.com/retlehs"
     }
   ],
-  "keywords": ["bedrock", "composer", "roots", "wordpress", "wp", "wp-config"],
+  "keywords": [
+    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+  ],
   "support": {
     "issues": "https://github.com/roots/bedrock/issues",
     "forum": "https://discourse.roots.io/category/bedrock"
@@ -39,7 +41,7 @@
     "roots/bedrock-disallow-indexing": "^2.0",
     "roots/wordpress": "^5.8",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-plugin/spatie-ray": "^1.2.3",
     "wpackagist-plugin/woocommerce": "*",
     "wpackagist-plugin/woocommerce-gateway-stripe": "*",
