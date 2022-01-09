@@ -34,6 +34,18 @@
   when: item.value.site_hosts | rejectattr('canonical', 'defined') | list | count
   tags: [letsencrypt, wordpress]
 
+- name: Import PHP version specific vars
+  include_vars: "{{ lookup('first_found', params) }}"
+  vars:
+    params:
+      files:
+        - '{{ php_version }}.yml'
+        - '7.4.yml'
+      paths:
+        - "{{ playbook_dir }}/roles/php/vars/"
+
+  tags: [php, memcached]
+
 - name: Verify dict format for apt package component variables
   fail:
     msg: "{{ lookup('template', 'package_vars_wrong_format_msg.j2') }}"
@@ -67,7 +79,9 @@
 - name: Validate Ubuntu version
   debug:
     msg: |
-      Trellis is built for Ubuntu 18.04 Bionic as of https://github.com/roots/trellis/pull/992
+      Ubuntu 18.04 Bionic is the minimum supported version of Ubuntu in Trellis 1.0+ (as of https://github.com/roots/trellis/pull/992)
+
+      20.04 Focal is the recommend version for Trellis 1.7+ (as of https://github.com/roots/trellis/pull/1197)
 
       Your Ubuntu version is {{ ansible_distribution_version }} {{ ansible_distribution_release }}
 
@@ -77,16 +91,27 @@
 
       Development via Vagrant: `vagrant destroy && vagrant up`
 
-      Staging/Production: Create a new server with Ubuntu 18.04 and provision
-  when: ansible_distribution_release != 'bionic'
+      Staging/Production: Create a new server with Ubuntu 20.04 and provision
+  when: ansible_distribution_version is version('18.04', '<')
 
 - name: Check whether passlib is needed
   fail:
     msg: |
-      Ansible on OS X requires python passlib module to create user password hashes
+      Ansible on macOS requires Python's passlib module to create user password hashes
 
-      sudo easy_install pip
-      pip install passlib
+      If you're seeing this error message, you likely didn't use trellis-cli to create your project.
+      We highly recommend installing and using trellis-cli to manage your Trellis projects.
+
+      See https://github.com/roots/trellis-cli for more documentation.
+
+      For existing projects, you can run `trellis init` which will manage the dependencies automatically and fix this problem
+      as long as you use the `trellis` commands (like `trellis provision`) afterwards.
+
+      To fix this manually, use pip to install the package: pip install passlib
+
+      If pip is not installed, you'll have to install it first.
+      See https://stackoverflow.com/questions/17271319/how-do-i-install-pip-on-macos-or-os-x for many options.
+
   when: env != 'development' and darwin_without_passlib | default(false)
   run_once: true
 
@@ -109,6 +134,10 @@
     msg: "{{ lookup('template', 'validate_ssh_msg.j2') }}"
   when: openssh_6_8_plus and validate_ssh | default(true)
   tags: [sshd]
+
+- name: Update apt packages
+  apt:
+    update_cache: yes
 
 - name: Checking essentials
   apt:
@@ -143,13 +172,14 @@
     generate_ssh_key: yes
   when: env == 'development'
 
-- name: Retrieve SSH client IP
-  block:
-    - ipify_facts:
+- block:
+    - name: Retrieve SSH client IP
+      ipify_facts:
       delegate_to: localhost
       become: no
       when: env != 'development' and ssh_client_ip_lookup | default(true)
       tags: [fail2ban, ferm]
   rescue:
-    - fail:
+    - name: Fail when unable to retrieve SSH client IP
+      fail:
         msg: "External IP resolution failed. Check that your DNS servers are working. Try to disable DNSCrypt if you are using it."

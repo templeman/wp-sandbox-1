@@ -14,7 +14,8 @@ from ansible.module_utils.six import string_types
 def system(vagrant_version=None):
     # Get most recent Trellis CHANGELOG entry
     changelog_msg = ''
-    ansible_path = os.getenv('ANSIBLE_CONFIG', os.getcwd())
+    ansible_config_path = os.getenv('ANSIBLE_CONFIG')
+    ansible_path = os.path.dirname(ansible_config_path) if ansible_config_path else os.getcwd()
     changelog = os.path.join(ansible_path, 'CHANGELOG.md')
 
     if os.path.isfile(changelog):
@@ -54,7 +55,7 @@ def replace_item_with_key(obj, result):
     )
 
     if should_replace:
-        if 'key' in result._result[item]:
+        if type(result._result[item]) is dict and 'key' in result._result[item]:
             result._result[item] = result._result[item]['key']
         elif type(result._result[item]) is dict:
             subitem = '_ansible_item_label' if '_ansible_item_label' in result._result[item] else 'item'
@@ -101,17 +102,17 @@ def display(obj, result):
     hr = '-' * int(wrap_width*.67)
 
     if obj.task_failed and first:
-        display(system(obj.vagrant_version), 'bright gray')
-        display(hr, 'bright gray')
+        display(system(obj.vagrant_version), 'bright gray', screen_only=True)
+        display(hr, 'bright gray', screen_only=True)
 
     if msg == '':
         if obj.task_failed and not first:
-            display(hr, 'bright gray')
+            display(hr, 'bright gray', screen_only=True)
         else:
             return
     else:
         if not first:
-            display(hr, 'bright gray')
+            display(hr, 'bright gray', screen_only=True)
         display(msg, 'red' if obj.task_failed else 'bright purple')
 
 def display_host(obj, result):
