@@ -48,8 +48,7 @@
     "wpackagist-plugin/wp-crontrol": "^1.7.0",
     "wpackagist-theme/storefront": "*",
     "wpackagist-theme/twentytwentyfour": "^1.0",
-    "modernadventure/woocommerce-deposits": "dev-main",
-    "modernadventure/lottery-for-woocommerce": "dev-main"
+    "modernadventure/woocommerce-deposits": "dev-main"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",

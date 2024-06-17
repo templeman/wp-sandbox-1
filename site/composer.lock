@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffe59661817f587821c9d51cf0436981",
+    "content-hash": "86c8be60e55e5a206d53e03db9d23602",
     "packages": [
         {
             "name": "composer/installers",
@@ -224,38 +224,6 @@
                 }
             ],
             "time": "2023-11-12T22:16:48+00:00"
-        },
-        {
-            "name": "modernadventure/lottery-for-woocommerce",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:modernadventure/lottery-for-woocommerce.git",
-                "reference": "e5e20d8b6a2ccee9e07dbf1d607ad053cd928b17"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/modernadventure/lottery-for-woocommerce/zipball/e5e20d8b6a2ccee9e07dbf1d607ad053cd928b17",
-                "reference": "e5e20d8b6a2ccee9e07dbf1d607ad053cd928b17",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "composer/installers": ">=v1.1.0"
-            },
-            "default-branch": true,
-            "type": "wordpress-plugin",
-            "notification-url": "https://repo.packagist.com/moad/downloads/",
-            "support": {
-                "source": "https://github.com/modernadventure/lottery-for-woocommerce/tree/main",
-                "issues": "https://github.com/modernadventure/lottery-for-woocommerce/issues"
-            },
-            "time": "2022-07-19T21:24:01+00:00"
         },
         {
             "name": "modernadventure/woocommerce-deposits",
@@ -1256,15 +1224,15 @@
         },
         {
             "name": "wpackagist-plugin/spatie-ray",
-            "version": "1.7.5",
+            "version": "1.7.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/spatie-ray/",
-                "reference": "tags/1.7.5"
+                "reference": "tags/1.7.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/spatie-ray.1.7.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/spatie-ray.1.7.6.zip",
                 "mirrors": [
                     {
                         "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
@@ -2306,7 +2274,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "modernadventure/woocommerce-deposits": 20,
-        "modernadventure/lottery-for-woocommerce": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
