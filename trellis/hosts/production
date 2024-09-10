@@ -2,7 +2,7 @@
 # List each machine only once per [group], even if it will host multiple sites.
 
 [production]
-your_server_ip
+104.248.69.243
 
 [web]
-your_server_ip
+104.248.69.243
