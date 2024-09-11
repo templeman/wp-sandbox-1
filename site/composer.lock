@@ -1257,15 +1257,15 @@
         },
         {
             "name": "wpackagist-plugin/altcha-spam-protection",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/altcha-spam-protection/",
-                "reference": "tags/1.7.0"
+                "reference": "tags/1.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/altcha-spam-protection.1.7.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/altcha-spam-protection.1.8.0.zip",
                 "mirrors": [
                     {
                         "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
