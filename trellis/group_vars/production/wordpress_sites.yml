@@ -3,7 +3,7 @@
 # Define accompanying passwords/secrets in group_vars/production/vault.yml
 
 wordpress_sites:
-  modernadventure.vip:
+  modernadventure.com:
     site_hosts:
       - canonical: sandbox.modernadventure.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
