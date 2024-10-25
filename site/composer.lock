@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5e5d46d2f0b4cbe772a4ee3e86e0e38",
+    "content-hash": "92a27196127a012ba7f5447ff93b3aa6",
     "packages": [
         {
             "name": "composer/installers",
@@ -1279,6 +1279,31 @@
             "type": "wordpress-plugin",
             "notification-url": "https://repo.packagist.com/moad/downloads/",
             "homepage": "https://wordpress.org/plugins/altcha-spam-protection/"
+        },
+        {
+            "name": "wpackagist-plugin/duplicate-post",
+            "version": "4.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/duplicate-post/",
+                "reference": "tags/4.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.4.5.zip",
+                "mirrors": [
+                    {
+                        "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://repo.packagist.com/moad/downloads/",
+            "homepage": "https://wordpress.org/plugins/duplicate-post/"
         },
         {
             "name": "wpackagist-plugin/html-forms",
