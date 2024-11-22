@@ -57,7 +57,8 @@
     "wpackagist-theme/storefront": "*",
     "wpackagist-theme/twentytwentyfour": "^1.0",
     "modernadventure/html-forms-premium": "dev-main",
-    "modernadventure/woocommerce-deposits": "dev-main"
+    "modernadventure/woocommerce-deposits": "dev-main",
+    "modernadventure/woocommerce-gift-cards": "dev-main"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",

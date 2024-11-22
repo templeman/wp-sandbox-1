@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92a27196127a012ba7f5447ff93b3aa6",
+    "content-hash": "6e921664fd65869305a2e47fb6f5e98e",
     "packages": [
         {
             "name": "composer/installers",
@@ -289,6 +289,38 @@
                 "issues": "https://github.com/modernadventure/woocommerce-deposits/issues"
             },
             "time": "2023-07-27T22:46:36+00:00"
+        },
+        {
+            "name": "modernadventure/woocommerce-gift-cards",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:modernadventure/woocommerce-gift-cards.git",
+                "reference": "88428f548a89e0710ea4bded1c07881f91d2ef9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/modernadventure/woocommerce-gift-cards/zipball/88428f548a89e0710ea4bded1c07881f91d2ef9c",
+                "reference": "88428f548a89e0710ea4bded1c07881f91d2ef9c",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "composer/installers": ">=v1.1.0"
+            },
+            "default-branch": true,
+            "type": "wordpress-plugin",
+            "notification-url": "https://repo.packagist.com/moad/downloads/",
+            "support": {
+                "source": "https://github.com/modernadventure/woocommerce-gift-cards/tree/main",
+                "issues": "https://github.com/modernadventure/woocommerce-gift-cards/issues"
+            },
+            "time": "2024-11-21T01:27:15+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -2422,6 +2454,7 @@
     "stability-flags": {
         "modernadventure/html-forms-premium": 20,
         "modernadventure/woocommerce-deposits": 20,
+        "modernadventure/woocommerce-gift-cards": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
