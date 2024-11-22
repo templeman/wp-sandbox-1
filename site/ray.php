@@ -8,7 +8,10 @@ return [
     /*
      * The host used to communicate with the Ray app.
      */
-    'host' => '10.0.2.2',
+    'host' => '10.211.55.2', // Vagrant: Parallels
+    // 'host' => '10.0.2.2', // Vagrant: Default
+    // 'host' => 'host.lima.internal', // Lima
+    // 'host' => 'localhost', // Ray default
 
     /*
      * The port number used to communicate with the Ray app.
