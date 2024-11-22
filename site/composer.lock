@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e921664fd65869305a2e47fb6f5e98e",
+    "content-hash": "cade7d4bec4138e836820b19ef1364ca",
     "packages": [
         {
             "name": "composer/installers",
@@ -157,6 +157,25 @@
                 }
             ],
             "time": "2024-06-24T20:46:46+00:00"
+        },
+        {
+            "name": "deliciousbrains-plugin/wp-migrate-db-pro",
+            "version": "2.7.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=2.7.0",
+                "mirrors": [
+                    {
+                        "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://repo.packagist.com/moad/downloads/"
         },
         {
             "name": "graham-campbell/result-type",
