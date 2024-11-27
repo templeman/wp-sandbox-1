@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed8966545e02c5ac5caa6592a4e211d4",
+    "content-hash": "1936f1ef89fc719ebf6b1956715d00cc",
     "packages": [
         {
             "name": "composer/installers",
@@ -164,6 +164,25 @@
             "dist": {
                 "type": "zip",
                 "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=2.7.0",
+                "mirrors": [
+                    {
+                        "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://repo.packagist.com/moad/downloads/"
+        },
+        {
+            "name": "deliciousbrains-plugin/wp-offload-ses",
+            "version": "1.7.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-offload-ses&version=1.7.1",
                 "mirrors": [
                     {
                         "url": "https://repo.packagist.com/moad/dists/%package%/%version%/r%reference%.%type%",
