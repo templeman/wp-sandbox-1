@@ -124,6 +124,16 @@ Config::define('DISALLOW_FILE_MODS', true);
 // Limit the number of post revisions
 Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?? true);
 
+
+/**
+ * MOAD Settings
+ */
+
+// WP Offload SES
+Config::define('WPOSES_LICENCE', env('WP_OFFLOAD_SES_LICENSE'));
+Config::define('WPOSES_AWS_ACCESS_KEY_ID', env('AWS_ACCESS_KEY_ID'));
+Config::define('WPOSES_AWS_SECRET_ACCESS_KEY', env('AWS_SECRET_ACCESS_KEY'));
+
 /**
  * Debugging Settings
  */
